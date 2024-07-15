@@ -1,0 +1,27 @@
+.socialLinks {
+  display: flex;
+  margin-top: 25px;
+}
+
+.socialLink {
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  &.white {
+    color: var(--purple);
+    background-color: var(--white);
+  }
+
+  &.purple {
+    background-color: var(--purple);
+    color: var(--white);
+  }
+
+  & + .socialLink {
+    margin-left: 20px;
+  }
+}

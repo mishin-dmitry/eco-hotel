@@ -1,0 +1,40 @@
+.input {
+  margin-top: 10px;
+}
+
+.textarea {
+  margin-top: 50px;
+}
+
+.buttonRow {
+  display: flex;
+  margin-top: 30px;
+}
+
+.button {
+  background-color: var(--purple);
+  color: var(--white);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  flex: 1;
+  border-radius: 50px;
+  text-transform: uppercase;
+  padding: 10px 0;
+}
+
+.arrowContainer {
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  background-color: var(--purple);
+  color: var(--white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  & svg {
+    width: 30px;
+    height: 30px;
+  }
+}

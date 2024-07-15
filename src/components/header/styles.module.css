@@ -1,0 +1,121 @@
+.header {
+  /* TODO позиционирование девушка на экране */
+  width: 100vw;
+  height: 100vh;
+  padding: 30px 10px 10px;
+  position: relative;
+}
+
+.topline {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 15px 0;
+}
+
+.logo {
+  font-family: var(--helvetica);
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 900;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.burgerButton {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  color: var(--white);
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--purple);
+  transform: translateY(-100%);
+  visibility: hidden;
+  transition-property: transform, visibility;
+  transition-duration: 0.5s;
+  transition-delay: 0.3s;
+  z-index: 999;
+
+  & .menuInner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.2s;
+
+    @media (prefers-reduced-motion) {
+      transition: none;
+    }
+  }
+
+  &.open {
+    transform: translateY(0);
+    visibility: visible;
+    transition-delay: 0s;
+    transition-duration: 0.5s;
+
+    & .menuInner {
+      transition-delay: 0.3s;
+      opacity: 1;
+    }
+  }
+}
+
+.close {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.closeButton {
+  margin-top: 40px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 30px;
+  transition: color 0.2s;
+
+  @media (prefers-reduced-motion) {
+    transition: none;
+  }
+}
+
+.contacts {
+  padding: 30px 15px;
+}
+
+.textContainer {
+  margin-top: 330px;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.topText {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: var(--title-mobile-font-size);
+  font-family: var(--helvetica);
+  font-weight: 700;
+  margin: 30px 0 0;
+  text-align: right;
+}
+
+.arrow {
+  position: absolute;
+  top: calc(100vh - 60px);
+  left: 15px;
+  color: var(--white);
+}

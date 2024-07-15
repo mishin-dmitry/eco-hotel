@@ -1,0 +1,59 @@
+.footer {
+  background-color: var(--purple);
+  color: var(--white);
+}
+
+.section {
+  padding: 20px 15px 15px;
+
+  & + .section {
+    border-top: 1px solid var(--white);
+  }
+}
+
+.logo {
+  font-size: 25px;
+  font-family: var(--helvetica);
+  font-weight: 700;
+}
+
+.email {
+  text-decoration: none;
+  color: var(--wite);
+  margin-top: 10px;
+}
+
+.navMenu {
+  padding: 0 !important;
+  margin: 15px 0;
+  border: none !important;
+}
+
+.socialLink {
+  text-decoration: none;
+  color: var(--white);
+  display: inline-flex;
+
+  & + .socialLink {
+    margin-top: 10px;
+  }
+}
+
+.socialLinks {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.boldText {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+}
+
+.policy {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+}

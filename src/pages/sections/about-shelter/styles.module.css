@@ -1,0 +1,15 @@
+.section {
+  margin-top: 40px;
+  background-color: var(--purple);
+  padding: 50px 15px 40px;
+}
+
+.text {
+  text-align: left;
+  margin: 10px 0 15px;
+}
+
+.cards {
+  display: flex;
+  margin-top: 30px;
+}

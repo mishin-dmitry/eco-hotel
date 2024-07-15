@@ -1,0 +1,62 @@
+.section {
+  margin-top: 40px;
+  padding: 0 15px;
+}
+
+.text {
+  margin: 15px 0;
+}
+
+.title {
+  position: relative;
+}
+
+.bubble {
+  position: absolute;
+  bottom: 23px;
+  left: 155px;
+  z-index: -1;
+}
+
+.row {
+  display: flex;
+
+  & + .row {
+    margin-top: 10px;
+  }
+
+  & img {
+    height: 110px;
+    border-radius: 10px;
+
+    & + img {
+      margin-left: 10px;
+    }
+  }
+
+  &:nth-of-type(1) {
+    & img:first-child {
+      width: 60%;
+    }
+
+    & img:last-child {
+      width: 40%;
+    }
+  }
+
+  &:nth-of-type(2) {
+    & img:first-child {
+      width: 40%;
+    }
+
+    & img:last-child {
+      width: 60%;
+    }
+  }
+
+  &:nth-of-type(3) {
+    & img {
+      width: 100%;
+    }
+  }
+}

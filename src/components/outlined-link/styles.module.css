@@ -1,0 +1,13 @@
+.link {
+  display: flex;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid var(--black);
+  color: var(--black);
+  border-radius: 20px;
+  font-family: var(--helvetica);
+  font-weight: 700;
+  padding: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}

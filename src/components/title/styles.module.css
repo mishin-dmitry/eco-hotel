@@ -1,0 +1,11 @@
+.title {
+  font-weight: 700;
+  font-size: var(--title-mobile-font-size);
+  font-family: var(--helvetica);
+  margin: 0;
+  text-transform: uppercase;
+
+  &.white {
+    color: var(--white);
+  }
+}

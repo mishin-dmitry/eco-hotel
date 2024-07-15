@@ -1,0 +1,19 @@
+:root {
+  --white: #fff;
+  --black: #010101;
+  --purple: #7276f3;
+  --light-purple: #8e92f6;
+  --gray: #f4f5fa;
+  --middle-gray: #ddd;
+  --dark-gray: #b7a1a4;
+
+  /* font-family */
+  --helvetica: helvetica, sans-serif;
+  --roboto: 'Roboto', sans-serif;
+
+  /* font-sizes */
+  --title-mobile-font-size: 25px;
+  --title-desktop-font-size: 90px;
+  --text-mobile-font-size: 14px;
+  --text-desktop-font-size: 20px;
+}

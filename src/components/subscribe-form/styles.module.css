@@ -1,0 +1,18 @@
+.button {
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: var(--helvetica);
+  color: var(--white);
+  background-color: transparent;
+  margin-top: 10px;
+  display: inline-flex;
+  padding: 0;
+  align-items: center;
+
+  & svg {
+    flex-shrink: 0;
+  }
+}

@@ -1,0 +1,92 @@
+.section {
+  margin-top: 15px;
+  padding: 0 15px;
+}
+
+.card {
+  background-color: var(--gray);
+  border-radius: 10px;
+  padding: 15px 10px 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.title {
+  font-weight: 700;
+  font-size: var(--title-mobile-font-size);
+  font-family: var(--helvetica);
+}
+
+.description {
+  margin: 10px 0 0;
+}
+
+.book {
+  margin-top: 15px;
+}
+
+.innerCard {
+  background-color: var(--white);
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.imageContainer {
+  position: relative;
+  height: 210px;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+}
+
+.bottomRow {
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bubble {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--white);
+  font-size: var(--helvetica);
+  font-weight: 500;
+  border-radius: 20px;
+  width: 80px;
+  white-space: nowrap;
+  padding: 10px 0;
+}
+
+.content {
+  padding: 10px;
+
+  & p {
+    &:nth-child(1) {
+      & span {
+        color: var(--white);
+        background-color: var(--purple);
+        border-radius: 5px;
+        padding: 2px;
+      }
+    }
+
+    &:nth-child(2) {
+      margin-top: 10px;
+      color: var(--middle-gray);
+    }
+
+    &:nth-child(3) {
+      font-weight: 500;
+      margin: 15px 0;
+      text-transform: none;
+    }
+  }
+}

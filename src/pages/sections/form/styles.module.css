@@ -1,0 +1,32 @@
+.section {
+  margin-top: 40px;
+  padding: 0 15px;
+  text-align: center;
+}
+
+.image {
+  height: 200px;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.text {
+  margin: 10px 0 15px;
+}
+
+.card {
+  background-color: var(--gray);
+  border-radius: 20px;
+}
+
+.content {
+  padding: 20px 10px 0;
+}
+
+.bottomContent {
+  padding: 20px 10px 30px;
+}
+
+.form {
+  margin-top: 20px;
+}

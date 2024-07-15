@@ -1,0 +1,33 @@
+.navMenu {
+  & > a {
+    font-weight: 600;
+    color: var(--white);
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:not(.mobile) {
+      @media (--monitor) {
+        margin-right: 40px;
+      }
+    }
+
+    & + a {
+      margin-top: 10px;
+    }
+  }
+
+  &.small {
+    & > a {
+      font-weight: 400;
+      text-transform: none;
+    }
+  }
+
+  &.mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px 15px;
+    border-bottom: 1px solid var(--white);
+  }
+}

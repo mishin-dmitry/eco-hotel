@@ -1,0 +1,23 @@
+.section {
+  margin-top: 40px;
+}
+
+.sectionInner {
+  padding: 0 15px;
+}
+
+.bubble {
+  margin-top: 10px;
+}
+
+.carousel {
+  margin-top: 15px;
+}
+
+.background {
+  margin-top: 40px;
+  width: 100%;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -1,0 +1,36 @@
+.bubble {
+  padding: 10px;
+  border-radius: 20px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  text-transform: lowercase;
+  font-size: var(--text-mobile-font-size);
+  white-space: nowrap;
+
+  & svg {
+    margin-bottom: -5px;
+
+    &:first-child {
+      margin-right: 2px;
+    }
+
+    &:last-child {
+      margin-left: 2px;
+    }
+  }
+
+  &.purple {
+    color: var(--white);
+    background-color: var(--purple);
+  }
+
+  &.white {
+    color: var(--purple);
+    background-color: var(--white);
+  }
+
+  &.rotated {
+    transform: rotate(-5deg);
+  }
+}

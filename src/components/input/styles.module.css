@@ -1,0 +1,19 @@
+.input {
+  width: 100%;
+  color: var(--black);
+  outline: none;
+  border: none;
+  font-family: var(--roboto);
+
+  &.filled {
+    padding: 15px 10px;
+    border-radius: 5px;
+    background-color: var(--white);
+  }
+
+  &.underlined {
+    background-color: transparent;
+    border-bottom: 1px solid var(--black);
+    padding-bottom: 5px;
+  }
+}

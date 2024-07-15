@@ -1,0 +1,8 @@
+.text {
+  margin: 0;
+  text-transform: none;
+
+  &.white {
+    color: var(--white);
+  }
+}
