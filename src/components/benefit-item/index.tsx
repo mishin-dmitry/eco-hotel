@@ -21,7 +21,7 @@ export const BenefitItem: React.FC<BenefitItemProps> = ({
   image
 }) => (
   <div className={clsx(styles.item, className)}>
-    <h4 className={styles.title}>{title}</h4>
+    <h4 className={styles.title} dangerouslySetInnerHTML={{ __html: title }} />
     <Text className={styles.text}>{description}</Text>
     <img {...image} className={styles.image} />
   </div>

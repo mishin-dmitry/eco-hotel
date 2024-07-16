@@ -1,12 +1,23 @@
 .section {
   margin-top: 40px;
   padding: 0 15px 30px;
+
+  @media (--desktop) {
+    margin-top: 60px;
+    padding: 0 15px 100px;
+  }
 }
 
 .sectionInner {
   background-color: var(--gray);
   border-radius: 20px;
   text-align: center;
+
+  @media (--desktop) {
+    max-width: 1270px;
+    margin: 0 auto;
+    display: flex;
+  }
 }
 
 .logo {
@@ -14,6 +25,17 @@
   font-weight: 700;
   font-size: 30px;
   margin-bottom: 5px;
+
+  @media (--desktop) {
+    font-size: 120px;
+    margin-bottom: 0;
+  }
+}
+
+.mainTitle {
+  @media (--desktop) {
+    font-size: 70px;
+  }
 }
 
 .contacts {
@@ -21,6 +43,10 @@
   flex-direction: column;
   align-items: center;
   padding: 20px 20px 30px;
+
+  @media (--desktop) {
+    align-items: flex-start;
+  }
 }
 
 .link + .link {
@@ -51,10 +77,15 @@
 .map {
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 240px;
   border-radius: 10px;
   overflow: hidden;
   background-color: var(--white);
+
+  @media (--desktop) {
+    height: 600px;
+    margin: 20px 20px 0 0;
+  }
 }
 
 .addressContainer {
@@ -66,26 +97,30 @@
   right: -1px;
   padding: 10px;
 
-  &::after {
+  &::after,
+  &::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: -39px;
     height: 40px;
     width: 40px;
     border-top-right-radius: 50%;
     box-shadow: 0 -20px 0 0 var(--gray);
   }
 
+  &::after {
+    top: 0;
+    left: -40px;
+  }
+
   &::before {
-    content: '';
-    position: absolute;
     top: 69px;
     right: 0;
-    height: 40px;
-    width: 40px;
-    border-top-right-radius: 50%;
-    box-shadow: 0 -20px 0 0 var(--gray);
+  }
+
+  @media (--desktop) {
+    &::before {
+      top: 90px;
+    }
   }
 }
 

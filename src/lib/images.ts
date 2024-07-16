@@ -49,5 +49,10 @@ export const Images: Record<string, ImageProps> = {
     src: 'https://images.unsplash.com/photo-1708242828015-d4c591944496?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     srcSet: '',
     alt: 'Изображение гор'
+  },
+  CONTACTS_SECTION_DESKTOP_IMAGE: {
+    src: 'https://images.unsplash.com/photo-1708346217981-2beb1acc102d?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    srcSet: '',
+    alt: 'Изображение гор'
   }
 }

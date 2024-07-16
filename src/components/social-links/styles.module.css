@@ -24,4 +24,15 @@
   & + .socialLink {
     margin-left: 20px;
   }
+
+  @media (--desktop) {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+
+    & svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
 }

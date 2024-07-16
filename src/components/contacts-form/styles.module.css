@@ -1,14 +1,27 @@
 .input {
   margin-top: 10px;
+
+  @media (--desktop) {
+    margin-top: 30px;
+  }
 }
 
 .textarea {
   margin-top: 50px;
+
+  @media (--desktop) {
+    margin-top: 0;
+  }
 }
 
 .buttonRow {
   display: flex;
   margin-top: 30px;
+
+  @media (--desktop) {
+    margin-top: 0;
+    justify-content: flex-end;
+  }
 }
 
 .button {
@@ -17,10 +30,19 @@
   border: none;
   outline: none;
   cursor: pointer;
-  flex: 1;
   border-radius: 50px;
   text-transform: uppercase;
   padding: 10px 0;
+  font-size: var(--text-mobile-font-size);
+
+  @media (--mobile) {
+    flex: 1;
+  }
+
+  @media (--desktop) {
+    font-size: var(--text-desktop-font-size);
+    padding: 19px 60px;
+  }
 }
 
 .arrowContainer {
@@ -36,5 +58,37 @@
   & svg {
     width: 30px;
     height: 30px;
+  }
+
+  @media (--desktop) {
+    width: 60px;
+    height: 60px;
+
+    & svg {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+.form {
+  @media (--desktop) {
+    display: flex;
+  }
+}
+
+.bottom {
+  @media (--desktop) {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    justify-content: space-between;
+  }
+}
+
+.bottom,
+.top {
+  @media (--desktop) {
+    width: 50%;
   }
 }

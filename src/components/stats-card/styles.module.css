@@ -14,10 +14,26 @@
   & + .card {
     margin-left: 10px;
   }
+
+  @media (--desktop) {
+    width: calc(100% / 3);
+    height: 230px;
+    border-radius: 20px;
+    padding: 40px;
+    align-items: flex-start;
+
+    & + .card {
+      margin-left: 20px;
+    }
+  }
 }
 
 .count {
   font-size: 40px;
   font-family: var(--helvetica);
   font-weight: 300;
+
+  @media (--desktop) {
+    font-size: 130px;
+  }
 }

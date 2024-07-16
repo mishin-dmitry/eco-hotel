@@ -1,9 +1,18 @@
 .section {
   margin-top: 40px;
+
+  @media (--desktop) {
+    margin-top: 100px;
+  }
 }
 
 .sectionInner {
   padding: 0 15px;
+
+  @media (--desktop) {
+    margin: 0 auto;
+    max-width: 1300px;
+  }
 }
 
 .bubble {
@@ -12,6 +21,11 @@
 
 .carousel {
   margin-top: 15px;
+
+  @media (--desktop) {
+    display: flex;
+    margin-top: 80px;
+  }
 }
 
 .background {
@@ -20,4 +34,36 @@
   height: 400px;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (--desktop) {
+    height: 520px;
+  }
+}
+
+.row {
+  @media (--desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.benefit {
+  height: auto;
+  width: calc(100% / 4 + 20px);
+
+  &:first-of-type {
+    padding: 0 20px 0 0;
+    width: calc(100% / 4);
+  }
+
+  &:last-of-type {
+    padding: 0 0 0 20px;
+    width: calc(100% / 4);
+  }
+
+  padding: 0 20px;
+
+  & + .benefit {
+    border-left: 1px solid var(--black);
+  }
 }

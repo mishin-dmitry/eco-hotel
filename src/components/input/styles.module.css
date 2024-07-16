@@ -15,5 +15,9 @@
     background-color: transparent;
     border-bottom: 1px solid var(--black);
     padding-bottom: 5px;
+
+    @media (--desktop) {
+      padding-bottom: 10px;
+    }
   }
 }

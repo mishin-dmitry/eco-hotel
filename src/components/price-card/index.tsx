@@ -30,23 +30,27 @@ export const PriceCard: React.FC<PriceCardProps> = ({
 }) => (
   <div className={clsx(styles.card, className)}>
     <div className={styles.cardInner}>
-      <h3 className={styles.title}>
-        Размещение <br />
-        {variant}
-      </h3>
-      <div className={styles.price}>
-        <span>{price} &#8381;</span> (спальное место)
+      <div>
+        <h3 className={styles.title}>
+          Размещение <br />
+          {variant}
+        </h3>
+        <div className={styles.price}>
+          <span>{price} &#8381;</span> (спальное место)
+        </div>
+        <div className={styles.season}>
+          <Text className={styles.seasonTitle}>Альпинистский сезон:</Text>
+          <Text className={styles.seasonDates}>{seasonDates}</Text>
+        </div>
       </div>
-      <div className={styles.season}>
-        <Text className={styles.seasonTitle}>Альпинистский сезон:</Text>
-        <Text className={styles.seasonDates}>{seasonDates}</Text>
+      <div className={styles.bottom}>
+        <ul className={styles.points}>
+          {points.map(point => (
+            <li key={point}>{point}</li>
+          ))}
+        </ul>
+        <OutlinedLink href="#form">Консультация</OutlinedLink>
       </div>
-      <ul className={styles.points}>
-        {points.map(point => (
-          <li key={point}>{point}</li>
-        ))}
-      </ul>
-      <OutlinedLink href="#form">Консультация</OutlinedLink>
     </div>
     <div className={styles.imageContainer}>
       <img {...image} />

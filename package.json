@@ -38,6 +38,8 @@
     "react-feather": "^2.0.10",
     "react-hook-form": "^7.52.1",
     "react-slick": "^0.30.2",
+    "react-yandex-map": "^4.6.0",
+    "react-yandex-maps": "^4.6.0",
     "sharp": "^0.33.2",
     "slick-carousel": "^1.8.1",
     "smoothscroll": "^0.4.0",

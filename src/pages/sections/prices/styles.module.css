@@ -1,10 +1,29 @@
 .section {
   margin-top: 40px;
+}
+
+.sectionInner {
   padding: 0 15px;
+
+  @media (--desktop) {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+}
+
+.row {
+  @media (--desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .bubble {
   margin-top: 20px;
+
+  @media (--desktop) {
+    margin: 0;
+  }
 }
 
 .cards {

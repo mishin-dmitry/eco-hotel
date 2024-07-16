@@ -11,8 +11,20 @@
   display: inline-flex;
   padding: 0;
   align-items: center;
+  font-size: var(--text-mobile-font-size);
 
   & svg {
     flex-shrink: 0;
+  }
+
+  @media (--desktop) {
+    font-size: var(--text-desktop-font-size);
+    margin-top: 20px;
+
+    & svg {
+      width: 25px;
+      height: 25px;
+      margin-left: 5px;
+    }
   }
 }

@@ -8,4 +8,9 @@
   &.white {
     color: var(--white);
   }
+
+  @media (--desktop) {
+    font-size: var(--title-desktop-font-size);
+    line-height: 80px;
+  }
 }

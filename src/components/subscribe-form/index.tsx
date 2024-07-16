@@ -5,6 +5,7 @@ import styles from './styles.module.css'
 import { EMAIL_REGEX } from 'lib/constants'
 import { Input } from '../input'
 import { ArrowIcon } from '../icons'
+import clsx from 'clsx'
 
 export interface SubscribeFormValues {
   email: string
@@ -12,10 +13,14 @@ export interface SubscribeFormValues {
 
 interface SubscribeFormProps {
   onSubmit: (values: SubscribeFormValues) => Promise<void>
+  className?: string
 }
 
 // TODO error messages
-export const SubscribeForm: React.FC<SubscribeFormProps> = ({ onSubmit }) => {
+export const SubscribeForm: React.FC<SubscribeFormProps> = ({
+  onSubmit,
+  className
+}) => {
   const {
     handleSubmit,
     control,
@@ -45,7 +50,7 @@ export const SubscribeForm: React.FC<SubscribeFormProps> = ({ onSubmit }) => {
   )
 
   return (
-    <form className={styles.form} onSubmit={submit}>
+    <form className={clsx(styles.form, className)} onSubmit={submit}>
       <Controller
         name="email"
         control={control}

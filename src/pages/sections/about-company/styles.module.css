@@ -1,5 +1,14 @@
 .section {
   margin-top: 15px;
+
+  @media (--desktop) {
+    margin-top: 40px;
+  }
+}
+
+.sectionInner {
+  max-width: 1300px;
+  margin: 0 auto;
   padding: 0 15px;
 }
 
@@ -9,6 +18,11 @@
   padding: 15px 10px 10px;
   text-align: center;
   text-transform: uppercase;
+
+  @media (--desktop) {
+    padding: 30px 20px;
+    display: flex;
+  }
 }
 
 .title {
@@ -19,26 +33,50 @@
 
 .description {
   margin: 10px 0 0;
+
+  @media (--desktop) {
+    margin: 125px 0 0;
+
+    & br {
+      display: none;
+    }
+  }
 }
 
 .book {
   margin-top: 15px;
+
+  @media (--desktop) {
+    margin-top: 20px;
+  }
 }
 
 .innerCard {
   background-color: var(--white);
   border-radius: 10px;
   margin-top: 15px;
+
+  @media (--desktop) {
+    display: flex;
+    margin-top: 0;
+  }
 }
 
 .imageContainer {
   position: relative;
   height: 210px;
+  flex-shrink: 0;
 
   & img {
     width: 100%;
     height: 100%;
     border-radius: 10px;
+  }
+
+  @media (--desktop) {
+    width: 440px;
+    height: 330px;
+    margin: 10px 10px 0 0;
   }
 }
 
@@ -49,6 +87,21 @@
   bottom: 15px;
   display: flex;
   justify-content: space-between;
+
+  & svg {
+    color: var(--white);
+  }
+
+  @media (--desktop) {
+    bottom: 30px;
+    left: 20px;
+    right: 20px;
+
+    & svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
 }
 
 .bubble {
@@ -63,6 +116,12 @@
   width: 80px;
   white-space: nowrap;
   padding: 10px 0;
+
+  @media (--desktop) {
+    transform: none;
+    left: 30px;
+    top: 20px;
+  }
 }
 
 .content {
@@ -87,6 +146,41 @@
       font-weight: 500;
       margin: 15px 0;
       text-transform: none;
+
+      @media (--desktop) {
+        margin: 150px 0 15px;
+      }
+    }
+  }
+
+  @media (--desktop) {
+    width: 335px;
+    text-align: left;
+    padding: 25px 10px 10px;
+  }
+}
+
+.textContent {
+  @media (--desktop) {
+    text-align: left;
+    margin-right: 20px;
+
+    & > h2 {
+      font-size: 70px;
+    }
+  }
+}
+
+.br {
+  @media (--mobile) {
+    display: none;
+  }
+}
+
+.contentText {
+  @media (--desktop) {
+    & br {
+      display: none;
     }
   }
 }

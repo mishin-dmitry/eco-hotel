@@ -57,110 +57,114 @@ export const ContactsForm: React.FC<ContactsFormProps> = ({
 
   return (
     <form className={clsx(styles.form, className)} onSubmit={submit}>
-      <Controller
-        name="name"
-        control={control}
-        rules={{
-          required: {
-            value: true,
-            message: 'Введите ваше имя'
-          },
-          pattern: {
-            value: /^[\p{L}\s]+$/u,
-            message: 'Допускаются только буквы'
-          }
-        }}
-        render={({ field }) => (
-          // <FieldStatus
-          //   message={nameError?.message}
-          //   className={styles.fieldStatus}
-          //   status={fieldState.error && 'error'}>
-          <Input
-            value={field.value}
-            onChange={field.onChange}
-            // status={fieldState.error && 'error'}
-            placeholder="Имя"
-          />
-          // </FieldStatus>
-        )}
-      />
-      <Controller
-        name="email"
-        control={control}
-        rules={{
-          required: {
-            value: true,
-            message: 'Введите email'
-          },
-          pattern: {
-            value: EMAIL_REGEX,
-            message: 'Недопустимый email'
-          }
-        }}
-        render={({ field }) => (
-          // <FieldStatus
-          //   message={emailError?.message}
-          //   className={styles.fieldStatus}
-          //   status={fieldState.error && 'error'}>
-          <Input
-            value={field.value}
-            onChange={field.onChange}
-            placeholder="E-mail"
-            className={styles.input}
-          />
-          // </FieldStatus>
-        )}
-      />
-      <Controller
-        name="phone"
-        control={control}
-        rules={{
-          required: {
-            value: true,
-            message: 'Введите номер телефона'
-          }
-        }}
-        render={({ field }) => (
-          // <FieldStatus
-          //   message={phoneError?.message}
-          //   className={styles.fieldStatus}
-          //   status={fieldState.error && 'error'}>
-          <Input
-            value={field.value}
-            onChange={field.onChange}
-            // status={fieldState.error && 'error'}
-            placeholder="Телефон"
-            className={styles.input}
-          />
-          // </FieldStatus>
-        )}
-      />
-      <Controller
-        name="message"
-        control={control}
-        render={({ field }) => (
-          // <FieldStatus
-          //   className={styles.fieldStatus}
-          //   status={fieldState.error && 'error'}>
-          <Input
-            value={field.value}
-            onChange={field.onChange}
-            // status={fieldState.error && 'error'}
-            placeholder="Ваше сообщение"
-            className={styles.textarea}
-          />
-          // </FieldStatus>
-        )}
-      />
-      <div className={styles.buttonRow}>
-        <button
-          type="submit"
-          className={styles.button}
-          disabled={!(isDirty && isValid) || isSubmitting}>
-          Отправить
-        </button>
-        <div className={styles.arrowContainer}>
-          <ArrowIcon />
+      <div className={styles.top}>
+        <Controller
+          name="name"
+          control={control}
+          rules={{
+            required: {
+              value: true,
+              message: 'Введите ваше имя'
+            },
+            pattern: {
+              value: /^[\p{L}\s]+$/u,
+              message: 'Допускаются только буквы'
+            }
+          }}
+          render={({ field }) => (
+            // <FieldStatus
+            //   message={nameError?.message}
+            //   className={styles.fieldStatus}
+            //   status={fieldState.error && 'error'}>
+            <Input
+              value={field.value}
+              onChange={field.onChange}
+              // status={fieldState.error && 'error'}
+              placeholder="Имя"
+            />
+            // </FieldStatus>
+          )}
+        />
+        <Controller
+          name="email"
+          control={control}
+          rules={{
+            required: {
+              value: true,
+              message: 'Введите email'
+            },
+            pattern: {
+              value: EMAIL_REGEX,
+              message: 'Недопустимый email'
+            }
+          }}
+          render={({ field }) => (
+            // <FieldStatus
+            //   message={emailError?.message}
+            //   className={styles.fieldStatus}
+            //   status={fieldState.error && 'error'}>
+            <Input
+              value={field.value}
+              onChange={field.onChange}
+              placeholder="E-mail"
+              className={styles.input}
+            />
+            // </FieldStatus>
+          )}
+        />
+        <Controller
+          name="phone"
+          control={control}
+          rules={{
+            required: {
+              value: true,
+              message: 'Введите номер телефона'
+            }
+          }}
+          render={({ field }) => (
+            // <FieldStatus
+            //   message={phoneError?.message}
+            //   className={styles.fieldStatus}
+            //   status={fieldState.error && 'error'}>
+            <Input
+              value={field.value}
+              onChange={field.onChange}
+              // status={fieldState.error && 'error'}
+              placeholder="Телефон"
+              className={styles.input}
+            />
+            // </FieldStatus>
+          )}
+        />
+      </div>
+      <div className={styles.bottom}>
+        <Controller
+          name="message"
+          control={control}
+          render={({ field }) => (
+            // <FieldStatus
+            //   className={styles.fieldStatus}
+            //   status={fieldState.error && 'error'}>
+            <Input
+              value={field.value}
+              onChange={field.onChange}
+              // status={fieldState.error && 'error'}
+              placeholder="Ваше сообщение"
+              className={styles.textarea}
+            />
+            // </FieldStatus>
+          )}
+        />
+        <div className={styles.buttonRow}>
+          <button
+            type="submit"
+            className={styles.button}
+            disabled={!(isDirty && isValid) || isSubmitting}>
+            Отправить
+          </button>
+          <div className={styles.arrowContainer}>
+            <ArrowIcon />
+          </div>
         </div>
       </div>
     </form>
