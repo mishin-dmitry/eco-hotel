@@ -7,9 +7,23 @@ import { AccentText } from 'components/accent-text'
 import { OutlinedLink } from 'components/outlined-link'
 import { Text } from 'components/text'
 
+import smoothScrollTo from 'smoothscroll'
+
 import styles from './styles.module.css'
+import { Sections } from 'lib/sections'
 
 export const AboutCompanySection: React.FC = () => {
+  const onLinkClick = (event: React.SyntheticEvent, section: string) => {
+    event.preventDefault()
+
+    const selector = `#${section}`
+    const target = document.querySelector(selector)
+
+    if (target) {
+      smoothScrollTo(target, 500)
+    }
+  }
+
   return (
     <section className={styles.section}>
       <div className={styles.sectionInner}>
@@ -21,7 +35,10 @@ export const AboutCompanySection: React.FC = () => {
               уверенность
               <br /> на каждом этапе
             </Text>
-            <OutlinedLink href="#form" className={styles.book}>
+            <OutlinedLink
+              href="#form"
+              className={styles.book}
+              onClick={event => onLinkClick(event, Sections.FORM)}>
               Забронировать место
             </OutlinedLink>
           </div>
@@ -41,7 +58,11 @@ export const AboutCompanySection: React.FC = () => {
             <div className={styles.imageContainer}>
               <div className={styles.bubble}>О нас</div>
               <div className={styles.bottomRow}>
-                <AccentText href="#about" color="white">
+                <AccentText
+                  href="#about"
+                  tagName="a"
+                  color="white"
+                  onClick={event => onLinkClick(event, Sections.ABOUT)}>
                   Подробнее
                 </AccentText>
                 <ArrowIcon />

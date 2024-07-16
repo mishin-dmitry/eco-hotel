@@ -7,14 +7,16 @@ interface OutlinedLinkProps {
   children: React.ReactNode
   href: string
   className?: string
+  onClick?: (event: React.SyntheticEvent) => void
 }
 
 export const OutlinedLink: React.FC<OutlinedLinkProps> = ({
   children,
   href,
-  className
+  className,
+  onClick
 }) => (
-  <a className={clsx(styles.link, className)} href={href}>
+  <a className={clsx(styles.link, className)} href={href} onClick={onClick}>
     {children}
   </a>
 )
