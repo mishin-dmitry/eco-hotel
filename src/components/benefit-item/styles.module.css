@@ -43,7 +43,8 @@
   border-radius: 20px;
 
   @media (--desktop) {
-    width: 280px;
+    max-width: 280px;
     height: 280px;
+    width: 100%;
   }
 }
