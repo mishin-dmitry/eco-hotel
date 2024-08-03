@@ -1,4 +1,3 @@
-import '@mantine/notifications/styles.css'
 import 'styles/global.css'
 import 'styles/variables.css'
 

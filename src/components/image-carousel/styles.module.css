@@ -1,0 +1,49 @@
+.image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  padding: 30px 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.item {
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  width: 280px !important;
+  height: 450px;
+
+  @media (--desktop) {
+    width: 320px !important;
+  }
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0 0 0 / 0.5);
+
+  &.active {
+    background-color: transparent;
+  }
+}
+
+.text {
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.carousel {
+  margin-top: 50px;
+
+  :global(.slick-slide) {
+    margin: 0 10px;
+
+    @media (--mobile) {
+      text-align: center;
+      margin: 0;
+    }
+  }
+}

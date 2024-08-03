@@ -7,6 +7,7 @@ import { PricesSection } from 'pages/sections/prices'
 import { BenefitsSection } from 'pages/sections/benefits'
 import { FormSection } from 'pages/sections/form'
 import { ContactsSection } from 'pages/sections/contacts'
+import { AccomodationSection } from 'pages/sections/accommodation'
 
 import styles from './styles.module.css'
 
@@ -16,6 +17,7 @@ export const Main: React.FC = () => (
     <ComfortSection />
     <AboutShelterSection />
     <PricesSection />
+    <AccomodationSection />
     <BenefitsSection />
     <FormSection />
     <ContactsSection />
